@@ -1,0 +1,24 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main         # Run the workflow when code is pushed to the 'main' branch
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3    # Checkout your code
+
+      - name: Set up Node.js         # Set up Node.js environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies   # Install dependencies
+        run: npm install
+
+      - name: Run Tests              # Run tests
+        run: npm test

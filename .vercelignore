@@ -1,0 +1,21 @@
+# Ignore node modules as Vercel rebuilds them
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore environment files for security
+.env
+.env.local
+.env.*.local
+
+# Ignore build directories or other unnecessary files if any
+dist/
+build/
+
+# Ignore git metadata (optional as usually not uploaded)
+.git/
+.gitignore
+
+# Ignore README and docs
+README.md
